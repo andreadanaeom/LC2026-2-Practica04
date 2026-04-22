@@ -1,0 +1,197 @@
+Test suite Practica04-test: RUNNING...
+
+Tests: Conflicto
+  Caso: Con cláusula vacía [✔]
+  Caso: Sin cláusula vacía [✔]
+Tests: Éxito
+  Caso: Conjunto de cláusulas vacío [✔]
+  Caso: Conjunto de cláusulas no vacío [✔]
+Tests: Cláusula unitaria
+  Caso: Literal True [✔]
+  Caso: Literal False [✔]
+  Caso: Sin Literales [✔]
+Tests: Eliminación
+  Caso: Literal True [✘]
+  Caso: Literal False [✘]
+  Caso: Sin Literales [✘]
+Tests: Reducción
+  Caso: Literal True [✘]
+  Caso: Literal False [✘]
+  Caso: Sin Literales [✘]
+Tests: Separación
+  Caso: Literal True [✘]
+  Caso: Literal True [✘]
+Tests: Heurística
+  Caso: Un solo máximo [✘]
+  Caso: Dos máximos [✘]
+Tests: dpll
+  Caso: Un solo modelo [✘]
+  Caso: Tautología [✘]
+  Caso: Contradicción [✘]
+Tests: dpll2
+  Caso: Un solo modelo [✘]
+  Caso: Tautología [✘]
+  Caso: Contradicción [✘]
+  Caso: Truco [✘]
+
+Failures:
+
+  src/Practica04.hs:57:8: 
+  1) Tests: Eliminación Caso: Literal True
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:57:8 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Eliminación/Caso: Literal True/" --seed 791105715
+
+  src/Practica04.hs:57:8: 
+  2) Tests: Eliminación Caso: Literal False
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:57:8 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Eliminación/Caso: Literal False/" --seed 791105715
+
+  src/Practica04.hs:57:8: 
+  3) Tests: Eliminación Caso: Sin Literales
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:57:8 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Eliminación/Caso: Sin Literales/" --seed 791105715
+
+  src/Practica04.hs:61:7: 
+  4) Tests: Reducción Caso: Literal True
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:61:7 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Reducción/Caso: Literal True/" --seed 791105715
+
+  src/Practica04.hs:61:7: 
+  5) Tests: Reducción Caso: Literal False
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:61:7 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Reducción/Caso: Literal False/" --seed 791105715
+
+  src/Practica04.hs:61:7: 
+  6) Tests: Reducción Caso: Sin Literales
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:61:7 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Reducción/Caso: Sin Literales/" --seed 791105715
+
+  src/Practica04.hs:117:7: 
+  7) Tests: Separación Caso: Literal True
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:117:7 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Separación/Caso: Literal True/" --seed 791105715
+
+  src/Practica04.hs:117:7: 
+  8) Tests: Separación Caso: Literal True
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:117:7 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Separación/Caso: Literal True/" --seed 791105715
+
+  src/Practica04.hs:124:21: 
+  9) Tests: Heurística Caso: Un solo máximo
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:124:21 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Heurística/Caso: Un solo máximo/" --seed 791105715
+
+  src/Practica04.hs:124:21: 
+  10) Tests: Heurística Caso: Dos máximos
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:124:21 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: Heurística/Caso: Dos máximos/" --seed 791105715
+
+  src/Practica04.hs:128:8: 
+  11) Tests: dpll Caso: Un solo modelo
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:128:8 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: dpll/Caso: Un solo modelo/" --seed 791105715
+
+  src/Practica04.hs:128:8: 
+  12) Tests: dpll Caso: Tautología
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:128:8 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: dpll/Caso: Tautología/" --seed 791105715
+
+  src/Practica04.hs:128:8: 
+  13) Tests: dpll Caso: Contradicción
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:128:8 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: dpll/Caso: Contradicción/" --seed 791105715
+
+  src/Practica04.hs:132:9: 
+  14) Tests: dpll2 Caso: Un solo modelo
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:132:9 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: dpll2/Caso: Un solo modelo/" --seed 791105715
+
+  src/Practica04.hs:132:9: 
+  15) Tests: dpll2 Caso: Tautología
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:132:9 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: dpll2/Caso: Tautología/" --seed 791105715
+
+  src/Practica04.hs:132:9: 
+  16) Tests: dpll2 Caso: Contradicción
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:132:9 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: dpll2/Caso: Contradicción/" --seed 791105715
+
+  src/Practica04.hs:132:9: 
+  17) Tests: dpll2 Caso: Truco
+       uncaught exception: ErrorCall
+       Prelude.undefined
+       CallStack (from HasCallStack):
+         undefined, called at src/Practica04.hs:132:9 in Practica04-0.1.0.0-inplace:Practica04
+
+  To rerun use: --match "/Tests: dpll2/Caso: Truco/" --seed 791105715
+
+Randomized with seed 791105715
+
+Finished in 0.0091 seconds
+24 examples, 17 failures
+Test suite Practica04-test: FAIL
+Test suite logged to: /home/andreadanaeomz/Documentos/cuarto_semestre/logica/LC2026-2-Practica04/dist-newstyle/build/x86_64-linux/ghc-9.4.8/Practica04-0.1.0.0/t/Practica04-test/test/Practica04-0.1.0.0-Practica04-test.log

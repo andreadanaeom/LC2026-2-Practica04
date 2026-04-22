@@ -35,11 +35,13 @@ data ArbolDPLL = Node Estado ArbolDPLL | Branch Estado ArbolDPLL ArbolDPLL | Voi
 --IMPLEMENTACION PARTE 1
 --Ejercicio 1
 conflict :: Estado -> Bool
-conflict = undefined
+conflict (modelo, []) = False
+conflict (modelo, c:xs) = if esClausulaVacia c then True else conflict (modelo, xs)
 
 --Ejercicio 2
 success :: Estado -> Bool
-success = undefined
+success (modelo, []) = True
+success (modelo, xs) = False
 
 --Ejercicio 3
 unit :: Estado -> Estado
@@ -59,6 +61,10 @@ red :: Estado -> Estado
 red = undefined
 
 --Funciones auxiliares.
+esClausulaVacia :: Clausula -> Bool
+esClausulaVacia [] = True
+esClausulaVacia xs = False
+
 esUnitaria :: Clausula -> Bool
 esUnitaria [] = False
 esUnitaria [x] = True
@@ -83,18 +89,18 @@ darValor [Var p] = [(p, True)]
 darValor [Not (Var p)] = [(p, False)]
 
 acumularClausula :: Estado -> Estado -> Estado
-acumularClausula (_,xs) (12, ys) = (12, xs ++ ys)
+acumularClausula (_,xs) (l2, ys) = (l2, xs ++ ys)
 
 construirArbolDPLL :: Estado -> ArbolDPLL
-construirArbolDPLL estado =
-                | conflict estadi = Node estado Void
-                | sucess estado = Node estado Void
-                | segundoElemento propuesto /= segundoElemento estado = Node estado(construirArbolDPLL propuesto)
-                otherwise Branch estado (construirArbolDPLL izq) (construirArbolDPLL der)
+construirArbolDPLL estado 
+                | conflict estado = Node estado Void
+                | success estado = Node estado Void
+                | segundoElemento propuesto /= segundoElemento estado = Node estado (construirArbolDPLL propuesto)
+                | otherwise = Branch estado (construirArbolDPLL izq) (construirArbolDPLL der)
                 where
                     propuesto = red (elim (unit estado))
                     literal = heuristicsLiteral (segundoElemento estado)
-                    [izq, der] = sep literal estado 
+                    (izq, der) = sep literal estado 
 
 segundoElemento :: (a,b) -> b
 segundoElemento (_,y) = y
@@ -102,7 +108,7 @@ segundoElemento (_,y) = y
 explorarArbolDPLL :: ArbolDPLL -> Estado
 explorarArbolDPLL (Node estado Void) = estado
 explorarArbolDPLL (Node _ subarbol) = explorarArbolDPLL subarbol
-explorarArbolDPLL (Branch estado izq der) = if conflicto (explorarArbolDPLL izq)
+explorarArbolDPLL (Branch estado izq der) = if conflict (explorarArbolDPLL izq)
                                         then explorarArbolDPLL der
                                         else explorarArbolDPLL izq
 
