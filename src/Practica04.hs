@@ -114,7 +114,14 @@ explorarArbolDPLL (Branch estado izq der) = if conflict (explorarArbolDPLL izq)
 
 --Ejercicio 6
 sep :: Literal -> Estado -> (Estado, Estado)
-sep = undefined
+sep lit (modelo, claus) =
+  ( (modelo ++ [(ramear lit, True)], claus)
+  , (modelo ++ [(ramear lit, False)], claus)
+  )
+
+ramear :: Literal -> String
+ramear (Var x) = x
+ramear (Not (Var x)) = x
 
 --IMPLEMENTACION PARTE 2
 
